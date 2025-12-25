@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nir Badt | Subsurface & Reservoir Geomechanics</title>
+  <meta name="description" content="Subsurface and reservoir geomechanics expert transitioning from academia to the energy industry." />
+
+  <!-- =====================
+       BASIC STYLES & VARIABLES
+       ===================== -->
+  <style>
+    :root {
+      --primary: #0f2a44;
+      --secondary: #1f5f8b;
+      --accent: #e09f3e;
+      --bg: #f7f9fb;
+      --text: #1a1a1a;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 4rem 2rem;
+    }
+
+    header .hero {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+    }
+
+    header p {
+      max-width: 900px;
+      font-size: 1.2rem;
+    }
+
+    /* Placeholder for future profile image */
+    .profile-image {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 1rem 2rem;
+      max-width: 1100px;
+      margin-inline: auto;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    section {
+      padding: 3.5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-top: 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--secondary);
+    }
+
+    .tag {
+      display: inline-block;
+      background: #eef3f8;
+      color: var(--primary);
+      padding: 0.25rem 0.6rem;
+      border-radius: 12px;
+      font-size: 0.85rem;
+      margin: 0.2rem 0.2rem 0 0;
+    }
+
+    /* CV section */
+    .cv-actions {
+      margin-top: 1rem;
+    }
+
+    .cv-actions a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--secondary);
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Image gallery placeholders */
+    .image-placeholder {
+      background: #e5ebf0;
+      border: 2px dashed #b5c3d1;
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #5a6a78;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+<!-- =====================
+     HERO / HEADER
+     ===================== -->
+<header>
+  <div class="hero">
+    <div class="profile-image">
+      Your photo<br>(add later)
+    </div>
+    <div>
+      <h1>Nir Badt</h1>
+      <p>
+        Subsurface & Reservoir Geomechanics | Applied Geophysics | Energy Systems<br>
+        Bridging experimental rock physics and physics-based modeling with real-world subsurface engineering challenges
+      </p>
+    </div>
+  </div>
+</header>
+
+<!-- =====================
+     NAVIGATION
+     ===================== -->
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#expertise">Expertise</a></li>
+    <li><a href="#industry">Industry Applications</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- =====================
+     ABOUT
+     ===================== -->
+<section id="about">
+  <h2>About</h2>
+  <p>
+    I am an applied geophysicist and geomechanics specialist transitioning from academia to industry, with expertise in subsurface deformation, reservoir integrity, and fault mechanics under coupled stress, temperature, and pore-pressure conditions. My work integrates laboratory experiments, quantitative modeling, and physical intuition to address problems relevant to energy production, carbon storage, and subsurface risk mitigation.
+  </p>
+</section>
+
+<!-- =====================
+     EXPERTISE
+     ===================== -->
+<section id="expertise">
+  <h2>Core Expertise</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Reservoir & Fault Geomechanics</h3>
+      <p>Stress evolution, fault reactivation, compaction, and sealing in porous and fractured media.</p>
+      <span class="tag">Effective Stress</span>
+      <span class="tag">Fault Stability</span>
+      <span class="tag">Sealing & Healing</span>
+    </div>
+    <div class="card">
+      <h3>Fluid–Rock Interaction</h3>
+      <p>Coupled flow, pressure, and thermo-hydraulic-mechanical processes controlling strength and permeability.</p>
+      <span class="tag">Injection</span>
+      <span class="tag">Induced Seismicity</span>
+      <span class="tag">CCS</span>
+    </div>
+    <div class="card">
+      <h3>Experimental Mechanics</h3>
+      <p>Design and execution of custom laboratory experiments from nano- to bulk scale.</p>
+      <span class="tag">Rock Physics</span>
+      <span class="tag">Friction</span>
+      <span class="tag">Rheology</span>
+    </div>
+    <div class="card">
+      <h3>Modeling & Data</h3>
+      <p>Physics-based and data-driven modeling linking experiments to reservoir-scale behavior.</p>
+      <span class="tag">Continuum Models</span>
+      <span class="tag">DEM</span>
+      <span class="tag">Python / MATLAB</span>
+    </div>
+  </div>
+</section>
+
+<!-- =====================
+     INDUSTRY APPLICATIONS
+     ===================== -->
+<section id="industry">
+  <h2>Industry Applications</h2>
+  <div class="grid">
+    <div class="card"><h3>Energy Production</h3><p>Reservoir integrity, fault reactivation, and mechanical risks during production and injection.</p></div>
+    <div class="card"><h3>Carbon Capture & Storage</h3><p>Caprock integrity, fault sealing, and long-term storage security.</p></div>
+    <div class="card"><h3>Subsurface Storage</h3><p>Mechanical response under cyclic pressure and temperature loading.</p></div>
+    <div class="card"><h3>Hazard & Risk Assessment</h3><p>Linking microphysics to fault-scale stability and seismic risk.</p></div>
+  </div>
+</section>
+
+<!-- =====================
+     CV SECTION
+     ===================== -->
+<section id="cv">
+  <h2>Curriculum Vitae</h2>
+  <p>
+    A concise industry-oriented CV highlighting applied geomechanics, subsurface engineering relevance, and technical skills.
+  </p>
+  <div class="cv-actions">
+    <!-- Place your PDF in the repository root or /assets/ -->
+    <a href="Nir_Badt_CV_Energy.pdf" target="_blank">View CV (PDF)</a>
+    <a href="Nir_Badt_CV_Energy.pdf" download>Download CV</a>
+  </div>
+</section>
+
+<!-- =====================
+     PROJECTS / IMAGES (PLACEHOLDERS)
+     ===================== -->
+<section id="projects">
+  <h2>Selected Projects & Visuals</h2>
+  <p>
+    Examples of applied research, experiments, and modeling relevant to subsurface and reservoir geomechanics.
+  </p>
+  <div class="grid">
+    <div class="image-placeholder">Research image<br>(experiment / model)</div>
+    <div class="image-placeholder">Field or lab setup</div>
+    <div class="image-placeholder">Simulation result</div>
+  </div>
+</section>
+
+<!-- =====================
+     CONTACT
+     ===================== -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>
+    I am actively exploring industry roles and collaborations in subsurface and reservoir geomechanics.
+  </p>
+  <p>
+    📧 <a href="mailto:nirzbadt@gmail.com">nirzbadt@gmail.com</a><br>
+    🔗 <a href="https://www.linkedin.com/in/nir-badt-15252ba3/" target="_blank">LinkedIn</a>
+  </p>
+</section>
+
+<footer>
+  <p>© 2025 Nir Badt · Subsurface & Reservoir Geomechanics</p>
+</footer>
+
+</body>
+</html>
