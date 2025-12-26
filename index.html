@@ -35,7 +35,7 @@
 
     header .hero {
       display: grid;
-      grid-template-columns: 1fr auto; /* text left, image right */
+      grid-template-columns: 1fr auto;
       align-items: center;
       gap: 2rem;
       max-width: 1100px;
@@ -52,13 +52,12 @@
       font-size: 1.2rem;
     }
 
-    /* Profile image */
     .profile-image {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       overflow: hidden;
-      background: rgba(255,255,255,0.25); /* fallback */
+      background: rgba(255,255,255,0.25);
       flex-shrink: 0;
     }
 
@@ -70,7 +69,7 @@
     }
 
     /* =====================
-       NAVIGATION
+       NAV
        ===================== */
 
     nav {
@@ -84,7 +83,6 @@
     nav ul {
       list-style: none;
       display: flex;
-      flex-wrap: wrap;
       gap: 1.5rem;
       margin: 0;
       padding: 1rem 2rem;
@@ -141,47 +139,11 @@
       margin: 0.2rem 0.2rem 0 0;
     }
 
-    /* CV section */
-    .cv-actions {
-      margin-top: 1rem;
-    }
-
-    .cv-actions a {
-      display: inline-block;
-      margin-right: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: var(--secondary);
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: 600;
-    }
-
-    /* Image placeholders */
-    .image-placeholder {
-      background: #e5ebf0;
-      border: 2px dashed #b5c3d1;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #5a6a78;
-      border-radius: 10px;
-      font-size: 0.9rem;
-      text-align: center;
-    }
-
     footer {
       background: var(--primary);
       color: white;
       padding: 2rem;
       text-align: center;
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      font-weight: 600;
     }
   </style>
 </head>
@@ -197,7 +159,6 @@
         Bridging experimental rock physics and physics-based modeling with real-world subsurface engineering challenges
       </p>
     </div>
-
     <div class="profile-image">
       <img src="Nir.jpg" alt="Nir Badt">
     </div>
@@ -210,38 +171,56 @@
     <li><a href="#expertise">Expertise</a></li>
     <li><a href="#industry">Industry Applications</a></li>
     <li><a href="#cv">CV</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
 <section id="about">
   <h2>About</h2>
   <p>
-    I am an applied geophysicist and geomechanics specialist transitioning from academia to industry, with expertise in subsurface deformation, reservoir geomechanics, and fault mechanics under coupled stress, temperature, and pore-pressure conditions.
+    Applied geophysicist and geomechanics specialist focused on subsurface deformation, reservoir integrity, and coupled thermo-hydro-mechanical processes relevant to energy and storage systems.
   </p>
 </section>
 
 <section id="expertise">
   <h2>Core Expertise</h2>
   <div class="grid">
+
     <div class="card">
       <h3>Reservoir & Fault Geomechanics</h3>
       <p>Stress evolution, fault reactivation, compaction, and sealing in porous and fractured media.</p>
+      <span class="tag">Fault stability</span>
+      <span class="tag">Effective stress</span>
     </div>
+
     <div class="card">
       <h3>Fluid–Rock Interaction</h3>
-      <p>Coupled flow, pressure, and thermo-hydraulic-mechanical processes controlling strength and permeability.</p>
+      <p>Coupled flow, pore pressure, and thermo-hydraulic-mechanical weakening and healing.</p>
+      <span class="tag">Injection</span>
+      <span class="tag">Induced seismicity</span>
     </div>
+
+    <div class="card">
+      <h3>Experimental Rock Mechanics</h3>
+      <p>Custom laboratory testing from nano-scale contacts to bulk friction and rheology.</p>
+      <span class="tag">Rock physics</span>
+      <span class="tag">Friction</span>
+    </div>
+
+    <div class="card">
+      <h3>Modeling & Simulation</h3>
+      <p>Physics-based numerical models linking laboratory observations to reservoir-scale behavior.</p>
+      <span class="tag">Continuum</span>
+      <span class="tag">DEM</span>
+    </div>
+
   </div>
 </section>
 
 <section id="cv">
   <h2>Curriculum Vitae</h2>
-  <div class="cv-actions">
+  <p>
     <a href="Nir_Badt_CV_Energy.pdf" target="_blank">View CV (PDF)</a>
-    <a href="Nir_Badt_CV_Energy.pdf" download>Download CV</a>
-  </div>
+  </p>
 </section>
 
 <footer>
