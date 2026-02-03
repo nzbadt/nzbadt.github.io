@@ -75,10 +75,17 @@
     section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
     h2 { color: var(--primary); font-size: 2rem; border-left: 5px solid var(--accent); padding-left: 1rem; margin-bottom: 2rem; }
 
+    /* GRID FIX: Forces 2 columns on desktop, 1 on mobile */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: 1fr; /* Default to 1 column */
       gap: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr 1fr; /* Force exactly 2 columns on laptops */
+      }
     }
 
     .card {
@@ -94,16 +101,27 @@
     
     .card:hover { transform: translateY(-5px); }
 
-    .card-content { padding: 1.5rem; flex-grow: 1; }
-
+    /* IMAGE FIX: Standardized height and zoom effect */
     .card-image {
       width: 100%;
-      height: 200px;
+      height: 220px;
       background: #eee;
+      overflow: hidden;
+      border-bottom: 1px solid #eee;
     }
 
-    .card-image img { width: 100%; height: 100%; object-fit: cover; }
+    .card-image img { 
+      width: 100%; 
+      height: 100%; 
+      object-fit: cover; /* Change to 'contain' if your graphs are getting cut off */
+      transition: transform 0.5s ease;
+    }
 
+    .card:hover .card-image img {
+      transform: scale(1.08); /* Subtle zoom on hover */
+    }
+
+    .card-content { padding: 1.5rem; flex-grow: 1; }
     .card h3 { margin: 0 0 0.75rem 0; color: var(--primary); font-size: 1.3rem; }
     .card p { font-size: 0.95rem; color: var(--light-text); margin-bottom: 1rem; }
     
@@ -138,7 +156,6 @@
     }
 
     footer { background: var(--primary); color: white; padding: 3rem 2rem; text-align: center; }
-    
     a { color: var(--secondary); }
   </style>
 </head>
@@ -171,7 +188,7 @@
 <section id="about">
   <h2>The Bridge Between Physics & Engineering</h2>
   <p>
-    With a PhD from Brown and Postdoctoral experience at UPenn, Hebrew University and GFZ (Germany), I specialize in the <strong>mechanics of complex materials.</strong> My expertise lies at the intersection of experimental rock physics and physics-based modeling, focusing on how materials deform, fracture, and heal under coupled Thermo-Hydro-Mechanical (THM) loads.
+    With a PhD from Brown and Postdoctoral experience at UPenn, Hebrew University, and GFZ (Germany), I specialize in the <strong>mechanics of complex materials.</strong> My expertise lies at the intersection of experimental rock physics and physics-based modeling, focusing on how materials deform, fracture, and heal under coupled Thermo-Hydro-Mechanical (THM) loads.
   </p>
   <p>
     I am transitioning to industry to apply my background in <strong>high-precision mechanical testing and predictive modeling</strong> to two primary domains:
@@ -199,8 +216,8 @@
           <strong>Strategic Value:</strong> Optimized "flow laws" for predicting reservoir compaction and long-term stability of subsurface storage sites.
         </div>
         <a href="https://doi.org/10.1029/2019JB018872" class="btn-paper" target="_blank" rel="noopener">
-      View in JGR: Solid Earth →
-          </a>
+          View in JGR: Solid Earth →
+        </a>
       </div>
     </div>
 
@@ -217,26 +234,26 @@
           <strong>Strategic Value:</strong> Critical for understanding wear, friction-induced heat, and material degradation in high-contact engineering systems.
         </div>
         <a href="https://doi.org/10.1029/2023GL105471" class="btn-paper" target="_blank" rel="noopener">
-      View in Geophysical Research Letters →
-    </a>
+          View in Geophysical Research Letters →
+        </a>
       </div>
     </div>
 
     <div class="card">
-      <div class="card-image"><img src="roughness_2016.jpg" alt="Rock Fracture and Healing"></div>
+      <div class="card-image"><img src="roughness_2016.jpg" alt="Surface Roughness Evolution"></div>
       <div class="card-content">
         <div class="tag-container">
           <span class="tag">Fracture Mechanics</span>
           <span class="tag">Integrity</span>
         </div>
-        <h3>Fracture Damage & Self-Healing</h3>
-        <p>Investigated the chemical-mechanical processes that lead to fracture sealing and permeability reduction in brittle solids under stress.</p>
+        <h3>Surface Tribology & Interface Evolution</h3>
+        <p>Investigated the chemical-mechanical processes that lead to surface degradation and permeability reduction in brittle solids under stress.</p>
         <div class="impact-box">
-          <strong>Strategic Value:</strong> Vital for assessing the "self-sealing" capacity of caprocks in CO2 sequestration and nuclear waste isolation.
+          <strong>Strategic Value:</strong> Vital for assessing the "self-sealing" capacity of caprocks and wear-rates in sliding interfaces.
         </div>
         <a href="https://doi.org/10.1016/j.epsl.2016.03.026" class="btn-paper" target="_blank" rel="noopener">
-      View in Earth and Planetary Science Letters →
-    </a>
+          View in Earth and Planetary Science Letters →
+        </a>
       </div>
     </div>
 
@@ -248,13 +265,13 @@
           <span class="tag">Predictive Analytics</span>
         </div>
         <h3>Physics-Based THM Modeling</h3>
-        <p>Developed numerical simulations coupling heat flow, fluid pressure, and mechanical stress to predict catastrophic failure (earthquakes/fault slip).</p>
+        <p>Developed numerical simulations coupling heat flow, fluid pressure, and mechanical stress to predict catastrophic failure and dynamic deformation.</p>
         <div class="impact-box">
-          <strong>Strategic Value:</strong> Enables "digital twin" approaches to mitigate induced seismicity and understand the poromechanics of reservoir rocks during dynamic deformation.
+          <strong>Strategic Value:</strong> Enables "digital twin" approaches to mitigate induced seismicity and understand poromechanics in energy reservoirs.
         </div>
         <a href="https://doi.org/10.1029/2024JB030472" class="btn-paper" target="_blank" rel="noopener">
-      View in JGR: Solid Earth →
-    </a>
+          View in JGR: Solid Earth →
+        </a>
       </div>
     </div>
 
@@ -270,7 +287,7 @@
         <li>High-Pressure Triaxial, Rotary Shear, Direct Shear</li>
         <li>Nanoindentation & Micro-mechanical testing</li>
         <li>Scanning Electron Microscopy (SEM/EDS)</li>
-        <li>Tribometery & Rheometry</li>
+        <li>Tribometry & Rheometry</li>
       </ul>
     </div>
     <div class="card-content" style="background:white; border-radius:12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
@@ -279,25 +296,4 @@
         <li>Constitutive modeling of plastic/elastic solids</li>
         <li>Thermo-Hydraulic-Mechanical (THM) Coupling</li>
         <li>Signal processing & Time-series analysis</li>
-        <li>Python, MATLAB, Finite Element Methods</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="cv">
-  <h2>Connect</h2>
-  <p>I am actively seeking roles in Subsurface Engineering, R&D Leadership, and Applied Physics.</p>
-  <p>
-    📄 <a href="Nir_Badt_CV.pdf" style="font-weight:bold;">Download Full Curriculum Vitae</a><br><br>
-    📧 <a href="mailto:nirzbadt@gmail.com">nirzbadt@gmail.com</a> | 
-    🔗 <a href="https://www.linkedin.com/in/nir-badt-phd-15252ba3/">LinkedIn</a>
-  </p>
-</section>
-
-<footer>
-  <p>© 2026 Nir Badt, PhD • Israel</p>
-</footer>
-
-</body>
-</html>
+        <li>Python, MATLAB, Finite Element Methods
