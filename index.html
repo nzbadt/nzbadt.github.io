@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nir Badt | Subsurface & Reservoir Geomechanics</title>
-  <meta name="description" content="Subsurface and reservoir geomechanics expert transitioning from academia to the energy industry." />
+  <title>Nir Badt | Subsurface Geomechanics & Applied Mechanics</title>
+  <meta name="description" content="Expert in rock mechanics, material failure, and THM coupling transitioning to Energy and Defense-Tech." />
 
   <style>
     :root {
@@ -13,6 +13,7 @@
       --accent: #e09f3e;
       --bg: #f7f9fb;
       --text: #1a1a1a;
+      --light-text: #555;
     }
 
     body {
@@ -22,10 +23,6 @@
       background: var(--bg);
       line-height: 1.6;
     }
-
-    /* =====================
-       HEADER / HERO
-       ===================== */
 
     header {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -42,35 +39,18 @@
       margin: auto;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.6rem;
-    }
-
-    header p {
-      max-width: 700px;
-      font-size: 1.2rem;
-    }
+    header h1 { margin: 0; font-size: 2.6rem; }
+    header p { max-width: 700px; font-size: 1.1rem; opacity: 0.9; }
 
     .profile-image {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       overflow: hidden;
-      background: rgba(255,255,255,0.25);
-      flex-shrink: 0;
+      border: 4px solid rgba(255,255,255,0.2);
     }
 
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* =====================
-       NAV
-       ===================== */
+    .profile-image img { width: 100%; height: 100%; object-fit: cover; }
 
     nav {
       background: white;
@@ -90,88 +70,87 @@
       margin-inline: auto;
     }
 
-    nav a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: 600;
-    }
+    nav a { text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.95rem; }
 
-    /* =====================
-       SECTIONS
-       ===================== */
-
-    section {
-      padding: 3.5rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    h2 {
-      color: var(--primary);
-      margin-top: 0;
-    }
+    section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
+    h2 { color: var(--primary); font-size: 2rem; border-left: 5px solid var(--accent); padding-left: 1rem; margin-bottom: 2rem; }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
     }
 
     .card {
       background: white;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      padding: 0;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: transform 0.2s ease;
     }
+    
+    .card:hover { transform: translateY(-5px); }
+
+    .card-content { padding: 1.5rem; flex-grow: 1; }
 
     .card-image {
       width: 100%;
-      height: 140px;
-      border-radius: 8px;
-      overflow: hidden;
+      height: 200px;
+      background: #eee;
+    }
+
+    .card-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    .card h3 { margin: 0 0 0.75rem 0; color: var(--primary); font-size: 1.3rem; }
+    .card p { font-size: 0.95rem; color: var(--light-text); margin-bottom: 1rem; }
+    
+    .impact-box {
+      background: #f0f7ff;
+      border-radius: 6px;
+      padding: 0.75rem;
       margin-bottom: 1rem;
+      font-size: 0.85rem;
+      border-left: 3px solid var(--secondary);
     }
 
-    .card-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: var(--secondary);
-    }
-
+    .tag-container { margin-bottom: 1rem; }
     .tag {
       display: inline-block;
       background: #eef3f8;
-      color: var(--primary);
-      padding: 0.25rem 0.6rem;
-      border-radius: 12px;
-      font-size: 0.85rem;
+      color: var(--secondary);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      font-weight: bold;
       margin: 0.2rem 0.2rem 0 0;
+      text-transform: uppercase;
     }
 
-    footer {
-      background: var(--primary);
-      color: white;
-      padding: 2rem;
-      text-align: center;
+    .btn-paper {
+      display: inline-block;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+      font-size: 0.9rem;
     }
+
+    footer { background: var(--primary); color: white; padding: 3rem 2rem; text-align: center; }
+    
+    a { color: var(--secondary); }
   </style>
 </head>
-
 <body>
 
 <header>
   <div class="hero">
     <div>
-      <h1>Nir Badt</h1>
+      <h1>Nir Badt, PhD</h1>
       <p>
-        Subsurface & Reservoir Geomechanics | Applied Geophysics | Energy Systems<br>
-        Bridging experimental rock physics and physics-based modeling with real-world subsurface engineering challenges
+        <strong>Applied Mechanics | Subsurface Systems | Material Integrity</strong><br>
+        Specializing in the mechanical behavior of geological and brittle materials under extreme Pressure/Temperature conditions. Leveraging experimental physics and numerical modeling to solve challenges in Energy Storage and Defense-Tech.
       </p>
     </div>
     <div class="profile-image">
@@ -183,99 +162,133 @@
 <nav>
   <ul>
     <li><a href="#about">About</a></li>
-    <li><a href="#expertise">Expertise</a></li>
-    <li><a href="#industry">Industry Applications</a></li>
-    <li><a href="#cv">CV</a></li>
+    <li><a href="#projects">Strategic Projects</a></li>
+    <li><a href="#expertise">Core Expertise</a></li>
+    <li><a href="#cv">CV/Contact</a></li>
   </ul>
 </nav>
 
 <section id="about">
-  <h2>About</h2>
+  <h2>The Bridge Between Physics & Engineering</h2>
   <p>
-    I am an applied geophysicist and geomechanics specialist with a strong background in subsurface deformation, reservoir and fault mechanics, and coupled fluid–rock processes. My work focuses on understanding how stress, pore pressure, temperature, and material properties interact to control mechanical stability, permeability, and long-term integrity in geological systems.
+    With a PhD from Brown and Postdoctoral experience at UPenn, Hebrew University and GFZ (Germany), I specialize in the <strong>mechanics of complex materials.</strong> My expertise lies at the intersection of experimental rock physics and physics-based modeling, focusing on how materials deform, fracture, and heal under coupled Thermo-Hydro-Mechanical (THM) loads.
   </p>
   <p>
-    Trained in academia, I have led and contributed to experimental, theoretical, and numerical studies spanning nano- to reservoir-scale processes, including fault friction and healing, fluid-induced weakening, and time-dependent deformation in granular and fractured media. A defining aspect of my work is the ability to bridge laboratory observations and physics-based modeling with larger-scale subsurface behavior.
-  </p>
-  <p>
-    I am now seeking to transition from academia to industry, with particular interest in the energy sector, carbon capture and sequestration (CCS), subsurface storage, and reservoir engineering. I am motivated to apply my expertise to practical challenges such as reservoir integrity, fault reactivation risk, caprock sealing, and the safe and efficient management of subsurface resources.
+    I am transitioning to industry to apply my background in <strong>high-precision mechanical testing and predictive modeling</strong> to two primary domains:
+    <ul>
+      <li><strong>Energy Transition:</strong> Ensuring the structural integrity of CCS reservoirs, hydrogen storage, and geothermal systems.</li>
+      <li><strong>Defense & Aerospace:</strong> Analyzing energy dissipation, tribology, and material failure in high-performance environments.</li>
+    </ul>
   </p>
 </section>
 
-<section id="expertise">
-  <h2>Core Expertise</h2>
+<section id="projects">
+  <h2>Featured Research & Technical Leadership</h2>
   <div class="grid">
 
-  <div class="card">
-    <div class="card-image">
-      <img src="fault_geomechanics.jpg" alt="Reservoir and fault geomechanics">
+    <div class="card">
+      <div class="card-image"><img src="exp.jpg" alt="High P/T Experimental Setup"></div>
+      <div class="card-content">
+        <div class="tag-container">
+          <span class="tag">Extreme Environments</span>
+          <span class="tag">Energy</span>
+        </div>
+        <h3>Extreme P/T Material Rheology</h3>
+        <p>Designed and led experimental campaigns using triaxial and rotary shear apparatus to simulate conditions up to several kilometers deep in the crust.</p>
+        <div class="impact-box">
+          <strong>Strategic Value:</strong> Optimized "flow laws" for predicting reservoir compaction and long-term stability of subsurface storage sites.
+        </div>
+        <a href="#" class="btn-paper">View Publication →</a>
+      </div>
     </div>
-    <h3>Reservoir & Fault Geomechanics</h3>
-    <p>Stress evolution, fault reactivation, compaction, and sealing in porous and fractured media.</p>
-    <span class="tag">Fault stability</span>
-    <span class="tag">Effective stress</span>
-    <span class="tag">Cementation and sealing</span>
-  </div>
 
-  <div class="card">
-    <div class="card-image">
-      <img src="fluid_rock.PNG" alt="Fluid–rock interaction">
+    <div class="card">
+      <div class="card-image"><img src="nanoindentation.jpg" alt="Nanoindentation and Microscopy"></div>
+      <div class="card-content">
+        <div class="tag-container">
+          <span class="tag">Advanced Tribology</span>
+          <span class="tag">Defense-Tech</span>
+        </div>
+        <h3>Multi-Scale Energy Dissipation</h3>
+        <p>Quantified contact-scale friction and plastic deformation using nanoindentation and microscopy. Analyzed how energy dissipates across grain boundaries.</p>
+        <div class="impact-box">
+          <strong>Strategic Value:</strong> Critical for understanding wear, friction-induced heat, and material degradation in high-contact engineering systems.
+        </div>
+        <a href="#" class="btn-paper">View Publication →</a>
+      </div>
     </div>
-    <h3>Fluid–Rock Interaction</h3>
-    <p>Coupled flow, pore pressure, and thermo-hydraulic-mechanical weakening and healing.</p>
-    <span class="tag">Injection</span>
-    <span class="tag">Induced seismicity</span>
-    <span class="tag">Dynamic weakening</span>
-  </div>
 
-  <div class="card">
-    <div class="card-image">
-      <img src="exp.jpg" alt="Experimental rock mechanics">
+    <div class="card">
+      <div class="card-image"><img src="damage_healing.jpg" alt="Rock Fracture and Healing"></div>
+      <div class="card-content">
+        <div class="tag-container">
+          <span class="tag">Fracture Mechanics</span>
+          <span class="tag">Integrity</span>
+        </div>
+        <h3>Fracture Damage & Self-Healing</h3>
+        <p>Investigated the chemical-mechanical processes that lead to fracture sealing and permeability reduction in brittle solids under stress.</p>
+        <div class="impact-box">
+          <strong>Strategic Value:</strong> Vital for assessing the "self-sealing" capacity of caprocks in CO2 sequestration and nuclear waste isolation.
+        </div>
+        <a href="#" class="btn-paper">View Publication →</a>
+      </div>
     </div>
-    <h3>Experimental Rock Mechanics</h3>
-    <p>Custom laboratory testing from nano-scale contacts to bulk friction and rheology.</p>
-    <span class="tag">Rock physics</span>
-    <span class="tag">Friction</span>
-    <span class="tag">High T-P deformation</span>
-    <span class="tag">Micromechanics</span>
-  </div>
 
-  <div class="card">
-    <div class="card-image">
-      <img src="simulation.jpg" alt="Geomechanical modeling">
+    <div class="card">
+      <div class="card-image"><img src="thm_modeling.jpg" alt="Numerical THM Simulation"></div>
+      <div class="card-content">
+        <div class="tag-container">
+          <span class="tag">Modeling</span>
+          <span class="tag">Predictive Analytics</span>
+        </div>
+        <h3>Physics-Based THM Modeling</h3>
+        <p>Developed numerical simulations coupling heat flow, fluid pressure, and mechanical stress to predict catastrophic failure (earthquakes/fault slip).</p>
+        <div class="impact-box">
+          <strong>Strategic Value:</strong> Enables "digital twin" approaches to mitigate induced seismicity and optimize injection pressures in real-time.
+        </div>
+        <a href="#" class="btn-paper">View Publication →</a>
+      </div>
     </div>
-    <h3>Modeling & Simulation</h3>
-    <p>Physics-based numerical models linking laboratory observations to reservoir-scale behavior.</p>
-    <span class="tag">Continuum</span>
-    <span class="tag">Hydro-Thermal-Mechanical Coupling</span>
-  </div>
 
+  </div>
+</section>
+
+<section id="expertise">
+  <h2>Technical Toolkit</h2>
+  <div class="grid">
+    <div class="card-content" style="background:white; border-radius:12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <h3>Instrumentation & Lab</h3>
+      <ul style="font-size: 0.95rem;">
+        <li>High-Pressure Triaxial & Rotary Shear</li>
+        <li>Nanoindentation & Micro-mechanical testing</li>
+        <li>Scanning Electron Microscopy (SEM/EDS)</li>
+        <li>Acoustic Emission monitoring</li>
+      </ul>
+    </div>
+    <div class="card-content" style="background:white; border-radius:12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+      <h3>Analytical & Numerical</h3>
+      <ul style="font-size: 0.95rem;">
+        <li>Constitutive modeling of plastic/elastic solids</li>
+        <li>Thermo-Hydraulic-Mechanical (THM) Coupling</li>
+        <li>Signal processing & Time-series analysis</li>
+        <li>Python, MATLAB, Finite Element Methods</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <section id="cv">
-  <h2>Curriculum Vitae</h2>
+  <h2>Connect</h2>
+  <p>I am actively seeking roles in Subsurface Engineering, R&D Leadership, and Applied Physics.</p>
   <p>
-    <a href="Nir_Badt_CV_Energy.pdf" target="_blank">View CV (PDF)</a>
+    📄 <a href="Nir_Badt_CV.pdf" style="font-weight:bold;">Download Full Curriculum Vitae</a><br><br>
+    📧 <a href="mailto:nirzbadt@gmail.com">nirzbadt@gmail.com</a> | 
+    🔗 <a href="https://www.linkedin.com/in/nir-badt-phd-15252ba3/">LinkedIn</a>
   </p>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>
-    I am open to industry roles and collaborations in subsurface and reservoir geomechanics and defense-tech.
-  </p>
-
-  <p style="font-size: 1.05rem;">
-    📧 <a href="mailto:nirzbadt@gmail.com">nirzbadt@gmail.com</a><br>
-    🔗 <a href="https://www.linkedin.com/in/nir-badt-phd-15252ba3/" target="_blank">
-      LinkedIn – nir-badt-phd
-    </a>
-  </p>
-</section>
-  
 <footer>
-  <p>© 2025 Nir Badt · Subsurface & Reservoir Geomechanics</p>
+  <p>© 2026 Nir Badt, PhD • Philadelphia, PA</p>
 </footer>
 
 </body>
