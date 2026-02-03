@@ -75,22 +75,21 @@
     section { padding: 4rem 2rem; max-width: 1100px; margin: auto; }
     h2 { color: var(--primary); font-size: 2rem; border-left: 5px solid var(--accent); padding-left: 1rem; margin-bottom: 2rem; }
 
-    /* GRID FIX: Forces 2 columns on desktop, 1 on mobile */
+    /* Grid Logic: Forces 2x2 on Desktop */
     .grid {
       display: grid;
-      grid-template-columns: 1fr; /* Default to 1 column */
+      grid-template-columns: 1fr;
       gap: 2rem;
     }
 
     @media (min-width: 768px) {
       .grid {
-        grid-template-columns: 1fr 1fr; /* Force exactly 2 columns on laptops */
+        grid-template-columns: 1fr 1fr;
       }
     }
 
     .card {
       background: white;
-      padding: 0;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.08);
       display: flex;
@@ -101,24 +100,27 @@
     
     .card:hover { transform: translateY(-5px); }
 
-    /* IMAGE FIX: Standardized height and zoom effect */
+    /* Image Box Fix: No more extreme zooming */
     .card-image {
       width: 100%;
-      height: 220px;
-      background: #eee;
+      height: 240px; /* Slightly taller for better graph visibility */
+      background: #ffffff; /* White background for "contain" margins */
       overflow: hidden;
       border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .card-image img { 
-      width: 100%; 
-      height: 100%; 
-      object-fit: cover; /* Change to 'contain' if your graphs are getting cut off */
-      transition: transform 0.5s ease;
+      max-width: 100%; 
+      max-height: 100%; 
+      object-fit: contain; /* Keeps entire image visible without cropping */
+      transition: transform 0.4s ease;
     }
 
     .card:hover .card-image img {
-      transform: scale(1.08); /* Subtle zoom on hover */
+      transform: scale(1.03); /* Very slight zoom for interactivity */
     }
 
     .card-content { padding: 1.5rem; flex-grow: 1; }
@@ -167,7 +169,7 @@
       <h1>Nir Badt, PhD</h1>
       <p>
         <strong>Applied Mechanics | Subsurface Systems | Material Integrity</strong><br>
-        Specializing in the mechanical behavior of geological and brittle materials under extreme Pressure/Temperature conditions. Leveraging experimental physics and numerical modeling to solve challenges in Energy Storage and Defense-Tech.
+        Specializing in the mechanical behavior of geological and brittle materials under extreme Pressure/Temperature conditions.
       </p>
     </div>
     <div class="profile-image">
@@ -188,14 +190,10 @@
 <section id="about">
   <h2>The Bridge Between Physics & Engineering</h2>
   <p>
-    With a PhD from Brown and Postdoctoral experience at UPenn, Hebrew University, and GFZ (Germany), I specialize in the <strong>mechanics of complex materials.</strong> My expertise lies at the intersection of experimental rock physics and physics-based modeling, focusing on how materials deform, fracture, and heal under coupled Thermo-Hydro-Mechanical (THM) loads.
+    With a PhD from Brown and Postdoctoral experience at UPenn, Hebrew University, and GFZ (Germany), I specialize in the <strong>mechanics of complex materials.</strong> My expertise lies at the intersection of experimental rock physics and physics-based modeling.
   </p>
   <p>
-    I am transitioning to industry to apply my background in <strong>high-precision mechanical testing and predictive modeling</strong> to two primary domains:
-    <ul>
-      <li><strong>Energy Transition:</strong> Ensuring the structural integrity of CCS reservoirs, hydrogen storage, and geothermal systems.</li>
-      <li><strong>Defense & Aerospace:</strong> Analyzing energy dissipation, tribology, and material failure in high-performance environments.</li>
-    </ul>
+    I am transitioning to industry to apply my background in <strong>high-precision mechanical testing and predictive modeling</strong> to Energy Transition and Defense & Aerospace.
   </p>
 </section>
 
@@ -211,13 +209,11 @@
           <span class="tag">Energy</span>
         </div>
         <h3>Extreme P/T Material Rheology</h3>
-        <p>Designed and led experimental campaigns using triaxial and rotary shear apparatus to simulate conditions up to several kilometers deep in the crust.</p>
+        <p>Designed and led experimental campaigns using triaxial and rotary shear apparatus to simulate deep crustal conditions.</p>
         <div class="impact-box">
-          <strong>Strategic Value:</strong> Optimized "flow laws" for predicting reservoir compaction and long-term stability of subsurface storage sites.
+          <strong>Strategic Value:</strong> Optimized "flow laws" for predicting reservoir compaction and long-term stability.
         </div>
-        <a href="https://doi.org/10.1029/2019JB018872" class="btn-paper" target="_blank" rel="noopener">
-          View in JGR: Solid Earth →
-        </a>
+        <a href="https://doi.org/10.1029/2019JB018872" class="btn-paper" target="_blank" rel="noopener">View in JGR: Solid Earth →</a>
       </div>
     </div>
 
@@ -229,13 +225,11 @@
           <span class="tag">Defense-Tech</span>
         </div>
         <h3>Multi-Scale Energy Dissipation</h3>
-        <p>Quantified contact-scale friction and plastic deformation using nanoindentation and microscopy. Analyzed how energy dissipates across grain boundaries.</p>
+        <p>Quantified contact-scale friction and plastic deformation using nanoindentation and microscopy across grain boundaries.</p>
         <div class="impact-box">
-          <strong>Strategic Value:</strong> Critical for understanding wear, friction-induced heat, and material degradation in high-contact engineering systems.
+          <strong>Strategic Value:</strong> Critical for understanding wear, friction-induced heat, and material degradation.
         </div>
-        <a href="https://doi.org/10.1029/2023GL105471" class="btn-paper" target="_blank" rel="noopener">
-          View in Geophysical Research Letters →
-        </a>
+        <a href="https://doi.org/10.1029/2023GL105471" class="btn-paper" target="_blank" rel="noopener">View in Geophysical Research Letters →</a>
       </div>
     </div>
 
@@ -247,13 +241,11 @@
           <span class="tag">Integrity</span>
         </div>
         <h3>Surface Tribology & Interface Evolution</h3>
-        <p>Investigated the chemical-mechanical processes that lead to surface degradation and permeability reduction in brittle solids under stress.</p>
+        <p>Investigated chemical-mechanical processes leading to surface degradation and permeability reduction in brittle solids.</p>
         <div class="impact-box">
           <strong>Strategic Value:</strong> Vital for assessing the "self-sealing" capacity of caprocks and wear-rates in sliding interfaces.
         </div>
-        <a href="https://doi.org/10.1016/j.epsl.2016.03.026" class="btn-paper" target="_blank" rel="noopener">
-          View in Earth and Planetary Science Letters →
-        </a>
+        <a href="https://doi.org/10.1016/j.epsl.2016.03.026" class="btn-paper" target="_blank" rel="noopener">View in Earth and Planetary Science Letters →</a>
       </div>
     </div>
 
@@ -265,13 +257,11 @@
           <span class="tag">Predictive Analytics</span>
         </div>
         <h3>Physics-Based THM Modeling</h3>
-        <p>Developed numerical simulations coupling heat flow, fluid pressure, and mechanical stress to predict catastrophic failure and dynamic deformation.</p>
+        <p>Developed numerical simulations coupling heat, fluid pressure, and stress to predict catastrophic failure and dynamic deformation.</p>
         <div class="impact-box">
-          <strong>Strategic Value:</strong> Enables "digital twin" approaches to mitigate induced seismicity and understand poromechanics in energy reservoirs.
+          <strong>Strategic Value:</strong> Enables "digital twin" approaches to mitigate induced seismicity in energy reservoirs.
         </div>
-        <a href="https://doi.org/10.1029/2024JB030472" class="btn-paper" target="_blank" rel="noopener">
-          View in JGR: Solid Earth →
-        </a>
+        <a href="https://doi.org/10.1029/2024JB030472" class="btn-paper" target="_blank" rel="noopener">View in JGR: Solid Earth →</a>
       </div>
     </div>
 
@@ -287,13 +277,28 @@
         <li>High-Pressure Triaxial, Rotary Shear, Direct Shear</li>
         <li>Nanoindentation & Micro-mechanical testing</li>
         <li>Scanning Electron Microscopy (SEM/EDS)</li>
-        <li>Tribometry & Rheometry</li>
       </ul>
     </div>
     <div class="card-content" style="background:white; border-radius:12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
       <h3>Analytical & Numerical</h3>
       <ul style="font-size: 0.95rem;">
         <li>Constitutive modeling of plastic/elastic solids</li>
+        <li>Python, MATLAB, Finite Element Methods (FEM)</li>
         <li>Thermo-Hydraulic-Mechanical (THM) Coupling</li>
-        <li>Signal processing & Time-series analysis</li>
-        <li>Python, MATLAB, Finite Element Methods
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="cv">
+  <h2>Connect & Contact</h2>
+  <p>I am actively seeking roles in Subsurface Engineering, R&D Leadership, and Applied Physics.</p>
+  <div class="card-content" style="background:white; border-radius:12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); padding: 2rem;">
+    <p style="margin-top:0;">
+      📄 <strong>Curriculum Vitae:</strong> <a href="Nir_Badt_CV.pdf" target="_blank" style="color: var(--accent); font-weight:bold;">Download PDF</a>
+    </p>
+    <p>
+      📧 <strong>Email:</strong> <a href="mailto:nirzbadt@gmail.com">nirzbadt@gmail.com</a>
+    </p>
+    <p style="margin-bottom:0;">
+      🔗 <strong>LinkedIn:</strong> <a href="
